@@ -4,20 +4,20 @@
 
 **FastMonitor** 是一款基于 **Wails 框架**开发开源的**跨平台网络流量监控与威胁检测工具**,集成了数据包分析、进程关联、会话流统计、威胁情报检测、地理位置可视化等功能于一体。
 
-- **最新版本**: 1.0.0
-- **更新日期**: 2025/10/8
-- **下载地址**:  https://github.com/vam876/FastMonitor/releases (Windows、Apple Silicon)
+- **最新版本**: 1.1.0
+- **更新日期**: 2026/1/18
+- **下载地址**:  [https://github.com/vam876/FastMonitor/releases](https://github.com/vam876/FastMonitor/releases/tag/v1.1.0) (Windows、Apple Silicon)
 - **作者其他项目推荐**:  [WEB日志可视化分析工具](https://github.com/vam876/FastWLAT)  **|**  [图形化Windows日志安全分析工具](https://github.com/vam876/FastWinLog)  **|**  [图形化Linux日志安全分析工具](https://github.com/vam876/FastLinLog)
 
 ### 核心特性
 
-- 🚀 **高性能抓包引擎**: 基于 gopacket/pcap 实现,支持数据包实时处理，并对五元组会话/DNS/ICMP/HTTP进行分类展示
-- 🎯 **精准进程关联**: 自动将网络流量与进程绑定,支持主流操作系统
-- 🛡️ **智能威胁检测**: 支持自定义病毒等威胁情报IOC规则,实时告警
-- 🌍 **3D地理可视化**: 基于 ECharts GL 的3D地球和2D地图流量展示
-- 📊 **实时仪表盘**: 大屏展示网络流量、协议分布、TOP排行
-- 💾 **数据持久化**: SQLite存储 + PCAP文件归档,支持历史回溯
-- 🎨 **现代化界面**: Vue 3 + Element Plus + 浅色/深色主题
+-  **高性能抓包引擎**: 基于 gopacket/pcap 实现,支持数据包实时处理，并对五元组会话/DNS/ICMP/HTTP进行分类展示
+-  **精准进程关联**: 自动将网络流量与进程绑定,支持主流操作系统
+-  **智能威胁检测**: 支持自定义病毒等威胁情报IOC规则,实时告警
+-  **3D地理可视化**: 基于 ECharts GL 的3D地球和2D地图流量展示
+-  **实时仪表盘**: 大屏展示网络流量、协议分布、TOP排行
+-  **数据持久化**: SQLite存储 + PCAP文件归档,支持历史回溯
+-  **现代化界面**: Vue 3 + Element Plus + 浅色/深色主题
 
 
 <img width="1506" height="891" alt="截屏2025-10-08 14 11 25" src="https://github.com/user-attachments/assets/6bd2f3ef-cd7b-40df-a03c-c9d4cbc62652" />
@@ -47,7 +47,7 @@
 
 ---
 
-## 🎯 主要用途
+##  主要用途
 
 | 应用场景 | 功能描述 |
 |---------|---------|
@@ -60,7 +60,7 @@
 
 ---
 
-## 🏗️ 系统架构
+##  系统架构
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -93,9 +93,9 @@
 
 ---
 
-## 📚 功能模块详解
+##  功能模块详解
 
-### 1️⃣ 网卡选择 (Network Interface Selection)
+###  网卡选择 (Network Interface Selection)
 
 #### 功能描述
 - 自动检测系统所有可用网络接口(网卡)
@@ -318,10 +318,10 @@ func matchDNSRule(queryName string, rule *AlertRule) bool {
 ```
 
 #### 使用场景
-- 🔍 **恶意软件外联**: 检测DGA域名、C2域名
-- 🛡️ **钓鱼攻击**: 识别伪装成银行/政府的钓鱼域名
-- 📊 **流量分析**: 统计员工访问最多的网站
-- 🚫 **DNS劫持**: 检测异常的DNS响应(如返回错误IP)
+-  **恶意软件外联**: 检测DGA域名、C2域名
+-  **钓鱼攻击**: 识别伪装成银行/政府的钓鱼域名
+-  **流量分析**: 统计员工访问最多的网站
+-  **DNS劫持**: 检测异常的DNS响应(如返回错误IP)
 
 ---
 
@@ -658,10 +658,10 @@ func matchRule(value string, rule *AlertRule) bool {
 - ✅ **性能优化**: 避免每次启动都重复插入规则
 
 #### 使用场景
-- 🛡️ **APT检测**: 检测银狐、Lazarus等APT组织的IOC
-- 🚨 **实时告警**: 发现恶意流量立即弹窗提醒
-- 📊 **安全态势**: 统计告警趋势,评估网络安全状况
-- 🔍 **溯源分析**: 通过告警记录追溯攻击路径
+-  **APT检测**: 检测银狐、Lazarus等APT组织的IOC
+-  **实时告警**: 发现恶意流量立即弹窗提醒
+-  **安全态势**: 统计告警趋势,评估网络安全状况
+-  **溯源分析**: 通过告警记录追溯攻击路径
 
 ---
 
@@ -949,7 +949,7 @@ wails build
 
 
 
-## 🤝 贡献指南
+##  贡献指南
 
 欢迎提交Issue和Pull Request!
 
@@ -962,14 +962,14 @@ wails build
 ---
 
 
-## 📧 联系方式
+##  联系方式
 
 - **项目主页**: https://github.com/vam876/FastMonitor
 - **问题反馈**: https://github.com/vam876/FastMonitor/issues
 
 ---
 
-## 🙏 致谢
+##  致谢
 
 - [Wails](https://wails.io/) - 跨平台桌面应用框架
 - [gopacket](https://github.com/google/gopacket) - Go数据包处理库
